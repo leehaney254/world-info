@@ -3,14 +3,19 @@ import { Link } from 'react-router-dom';
 import { IoChevronBack } from 'react-icons/io5';
 import { BiMicrophone } from 'react-icons/bi';
 import { FiSettings } from 'react-icons/fi';
+import PropTypes from 'prop-types';
 
-const Navbar = () => (
+const Navbar = ({ data }) => (
   <header>
     <Link to="/"><IoChevronBack /></Link>
-    World info
+    {data}
     <BiMicrophone />
     <FiSettings />
   </header>
 );
+
+Navbar.propTypes = {
+  data: PropTypes.string.isRequired,
+};
 
 export default Navbar;

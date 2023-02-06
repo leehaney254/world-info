@@ -8,7 +8,7 @@ import './Home.css';
 
 const Home = () => (
   <>
-    <Navbar />
+    <Navbar data="Countries" />
     <div><img id="world" src={world} alt="world map" /></div>
     <Form />
     <p>Countries</p>
