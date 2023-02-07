@@ -31,8 +31,8 @@ const Home = () => {
     dispatch(filterContinent(e.target.value));
   };
 
-  const inputChangeHandler = (e) => {
-    console.log(e.target.value);
+  const inputChangeHandler = (t) => {
+    console.log(t.target.value);
   };
 
   return (
