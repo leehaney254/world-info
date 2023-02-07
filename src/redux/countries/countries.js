@@ -15,7 +15,7 @@ const fetchCountries = createAsyncThunk('country/fetchCountry', () => axios.get(
       region: country.region,
       population: country.population,
       area: country.area,
-      timezone: country.timezone,
+      timezones: country.timezones,
       flag: country.flags,
       currencies: country.currencies,
     }
