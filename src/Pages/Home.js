@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { BsSearch } from 'react-icons/bs';
 import { fetchCountries, filterContinent } from '../redux/countries/countries';
@@ -9,6 +9,7 @@ import Country from '../components/Country';
 import './Home.css';
 
 const Home = () => {
+  const [search, setSearch] = useState('');
   const dispatch = useDispatch();
   const countriesData = useSelector((state) => state);
   const { countries, continent } = countriesData;
@@ -19,6 +20,10 @@ const Home = () => {
   }, [dispatch, countries.length]);
 
   const displayCountries = countries.filter((country) => country.region === continent)
+    .filter((item) => (
+      search === '' ? item
+        : item.countryName.includes(search)
+    ))
     .map((country) => (
       <Country
         key={country.countryName}
@@ -31,8 +36,9 @@ const Home = () => {
     dispatch(filterContinent(e.target.value));
   };
 
-  const inputChangeHandler = (t) => {
-    console.log(t.target.value);
+  const inputChangeHandler = (e) => {
+    const input = e.target.value.charAt(0).toUpperCase() + e.target.value.slice(1);
+    setSearch(input);
   };
 
   return (
@@ -41,7 +47,7 @@ const Home = () => {
       <div><img id="world" src={world} alt="world map" /></div>
       <div>
         <form>
-          <input onChange={inputChangeHandler} type="text" placeholder="Eg Kenya, England" />
+          <input onChange={inputChangeHandler} value={search} type="search" placeholder="Eg Kenya, England" />
           <BsSearch />
         </form>
         <label htmlFor="cars">
