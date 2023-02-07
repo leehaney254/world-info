@@ -11,11 +11,12 @@ import './Home.css';
 const Home = () => {
   const dispatch = useDispatch();
   const countriesData = useSelector((state) => state);
-  useEffect(() => {
-    dispatch(fetchCountries());
-  }, [dispatch]);
-
   const { countries } = countriesData;
+  useEffect(() => {
+    if (countries.length === 0) {
+      dispatch(fetchCountries());
+    }
+  }, [dispatch, countries.length]);
 
   const displayCountries = countries.map((country) => (
     <Country
