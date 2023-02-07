@@ -3,21 +3,22 @@ import PropTypes from 'prop-types';
 import { BsArrowRightCircle } from 'react-icons/bs';
 import { Link } from 'react-router-dom';
 
-const Country = ({ data }) => (
+const Country = ({ name, population }) => (
   <div>
-    <Link to={data}>
+    <Link to={name}>
       <div>
         Flag
         <BsArrowRightCircle />
       </div>
-      <p>Name</p>
-      <p>Population</p>
+      <p>{name}</p>
+      <p>{population}</p>
     </Link>
   </div>
 );
 
 Country.propTypes = {
-  data: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+  population: PropTypes.number.isRequired,
 };
 
 export default Country;
