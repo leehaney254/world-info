@@ -1,8 +1,8 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import { BsSearch } from 'react-icons/bs';
 import { fetchCountries, filterContinent } from '../redux/countries/countries';
 import Navbar from '../components/Navbar';
-import Form from '../components/Form';
 import world from '../assets/world.jpg';
 import Country from '../components/Country';
 
@@ -31,12 +31,19 @@ const Home = () => {
     dispatch(filterContinent(e.target.value));
   };
 
+  const inputChangeHandler = (e) => {
+    console.log(e.target.value);
+  };
+
   return (
     <>
       <Navbar data="Countries" />
       <div><img id="world" src={world} alt="world map" /></div>
       <div>
-        <Form />
+        <form>
+          <input onChange={inputChangeHandler} type="text" placeholder="Eg Kenya, England" />
+          <BsSearch />
+        </form>
         <label htmlFor="cars">
           Choose by continent
           <select onChange={selectChangeHandler} value={continent} name="cars" id="cars">
