@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { fetchCountries } from '../redux/countries/countries';
+import { fetchCountries, filterContinent } from '../redux/countries/countries';
 import Navbar from '../components/Navbar';
 import Form from '../components/Form';
 import world from '../assets/world.jpg';
@@ -11,25 +11,43 @@ import './Home.css';
 const Home = () => {
   const dispatch = useDispatch();
   const countriesData = useSelector((state) => state);
-  const { countries } = countriesData;
+  const { countries, continent } = countriesData;
   useEffect(() => {
     if (countries.length === 0) {
       dispatch(fetchCountries());
     }
   }, [dispatch, countries.length]);
 
-  const displayCountries = countries.map((country) => (
-    <Country
-      key={country.countryName}
-      name={country.countryName}
-      population={country.population}
-    />
-  ));
+  const displayCountries = countries.filter((country) => country.region === continent)
+    .map((country) => (
+      <Country
+        key={country.countryName}
+        name={country.countryName}
+        population={country.population}
+      />
+    ));
+
+  const selectChangeHandler = (e) => {
+    dispatch(filterContinent(e.target.value));
+  };
+
   return (
     <>
       <Navbar data="Countries" />
       <div><img id="world" src={world} alt="world map" /></div>
-      <Form />
+      <div>
+        <Form />
+        <label htmlFor="cars">
+          Choose by continent
+          <select onChange={selectChangeHandler} value={continent} name="cars" id="cars">
+            <option value="Africa"> Africa</option>
+            <option value="Americas">Americas</option>
+            <option value="Asia">Asia</option>
+            <option value="Europe">Europe</option>
+            <option value="Oceania">Oceania</option>
+          </select>
+        </label>
+      </div>
       <p>Countries</p>
       <div>
         {countriesData.loading && <h1>Loading...</h1>}
