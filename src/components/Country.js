@@ -15,7 +15,8 @@ const Country = ({ name, population, flag }) => (
       <div className="countryName">
         <p>{name}</p>
         <div className="countryPopulation">
-          Population:
+          Population
+          <span className="colon">:</span>
           <p>{population}</p>
         </div>
       </div>
