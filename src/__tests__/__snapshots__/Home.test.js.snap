@@ -1,0 +1,48 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Home component renders correctly has a match with snapshot 1`] = `
+<ContextProvider
+  value={
+    Object {
+      "getServerState": undefined,
+      "store": Object {
+        "@@observable": [Function],
+        "dispatch": [Function],
+        "getState": [Function],
+        "replaceReducer": [Function],
+        "subscribe": [Function],
+      },
+      "subscription": Object {
+        "addNestedSub": [Function],
+        "getListeners": [Function],
+        "handleChangeWrapper": [Function],
+        "isSubscribed": [Function],
+        "notifyNestedSubs": [Function],
+        "trySubscribe": [Function],
+        "tryUnsubscribe": [Function],
+      },
+    }
+  }
+>
+  <Home
+    countryData={
+      Object {
+        "country": Array [
+          Object {
+            "area": 580367,
+            "capital": "Nairobi",
+            "countryName": "Kenya",
+            "currencies": "Kenyan shilling",
+            "flag": "https://flagcdn.com/ke.svg",
+            "population": 53771300,
+            "region": "Africa",
+            "timezones": "UTC+03:00",
+          },
+        ],
+        "error": null,
+        "loading": false,
+      }
+    }
+  />
+</ContextProvider>
+`;
