@@ -7,13 +7,13 @@
   display: flex;
   justify-content: space-around;
   padding: 1rem 0;
-  background-color: white;
+  color: #fff;
 }
 
 #form {
   display: flex;
   align-items: center;
-  border: 1px solid #2c135f;
+  border: 1px solid white;
   border-radius: 1rem;
   padding: 0 0.5rem;
 }
@@ -31,6 +31,8 @@
 
 #searchInput {
   border: none;
+  background-color: #2c135f;
+  color: #fff;
 }
 
 input:focus {
@@ -40,15 +42,16 @@ input:focus {
 #horizontaldivider {
   width: 0.1px;
   height: 100%;
-  border: 1px solid #2c135f;
+  border: 1px solid #fff;
   margin: 0 0.3rem;
-  background-color: #2c135f;
+  background-color: #fff;
 }
 
 #countriesFilter {
   border-radius: 1rem;
-  border-color: #2c135f;
-  color: #2c135f;
+  border-color: #fff;
+  color: #fff;
+  background-color: #2c135f;
 }
 
 h1 {
