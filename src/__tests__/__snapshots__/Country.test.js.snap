@@ -1,5 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Country component renders correctly 1`] = `ShallowWrapper {}`;
+
+exports[`Country component renders correctly 2`] = `ShallowWrapper {}`;
+
 exports[`Country render component The render is correct 1`] = `
 <div>
   <a
