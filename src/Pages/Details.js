@@ -4,6 +4,8 @@ import { useParams } from 'react-router-dom';
 import { fetchCountry } from '../redux/countries/countries';
 import Navbar from '../components/Navbar';
 
+import './Details.css';
+
 const Details = () => {
   const params = useParams();
   const dispatch = useDispatch();
@@ -27,35 +29,41 @@ const Details = () => {
           ) : null}
           {!countryData.loading && countryData.country.length ? (
             <div>
+              <div id="detailsFlag">
+                <img className="HomeFlag" src={countryData.country[0].flag.svg} alt="Country flag" />
+              </div>
               <div>
-                <img src={countryData.country[0].flag.svg} alt="Country flag" />
-                <div>
+                <div className="detailContainer">
                   <p>
                     Name:
-                    {countryData.country[0].countryName}
                   </p>
                   <p>
+                    {countryData.country[0].countryName}
+                  </p>
+                </div>
+                <div className="detailContainer">
+                  <p>
                     Currency:
+                  </p>
+                  <p>
                     {countryData.country[0].currencies[0].name}
                   </p>
                 </div>
-              </div>
-              <div>
-                <div>
+                <div className="detailContainer">
                   <p>
                     Capital:
                   </p>
                   <p>{countryData.country[0].capital}</p>
                 </div>
-                <div>
+                <div className="detailContainer">
                   <p>Area:</p>
                   <p>{countryData.country[0].area}</p>
                 </div>
-                <div>
+                <div className="detailContainer">
                   <p>Population:</p>
                   <p>{countryData.country[0].population}</p>
                 </div>
-                <div>
+                <div className="detailContainer">
                   <p>timezones:</p>
                   <p>{countryData.country[0].timezones[0]}</p>
                 </div>

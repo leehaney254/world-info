@@ -3,15 +3,22 @@ import PropTypes from 'prop-types';
 import { BsArrowRightCircle } from 'react-icons/bs';
 import { Link } from 'react-router-dom';
 
-const Country = ({ name, population }) => (
+import './Country.css';
+
+const Country = ({ name, population, flag }) => (
   <div>
     <Link to={name}>
-      <div>
-        Flag
+      <div className="homeFlag">
+        <img alt="Flag" src={flag} className="flagSize" />
         <BsArrowRightCircle />
       </div>
-      <p>{name}</p>
-      <p>{population}</p>
+      <div className="countryName">
+        <p>{name}</p>
+        <div className="countryPopulation">
+          Population:
+          <p>{population}</p>
+        </div>
+      </div>
     </Link>
   </div>
 );
@@ -19,6 +26,7 @@ const Country = ({ name, population }) => (
 Country.propTypes = {
   name: PropTypes.string.isRequired,
   population: PropTypes.number.isRequired,
+  flag: PropTypes.string.isRequired,
 };
 
 export default Country;

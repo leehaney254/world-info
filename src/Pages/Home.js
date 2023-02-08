@@ -29,6 +29,7 @@ const Home = () => {
         key={country.countryName}
         name={country.countryName}
         population={country.population}
+        flag={country.flag.svg}
       />
     ));
 
@@ -43,16 +44,17 @@ const Home = () => {
 
   return (
     <>
-      <Navbar data="Countries" />
+      <Navbar data="Countries" year={2023} />
       <div><img id="world" src={world} alt="world map" /></div>
-      <div>
-        <form>
-          <input onChange={inputChangeHandler} value={search} type="search" placeholder="Eg Kenya, England" />
+      <div id="filterContainer">
+        <form id="form">
+          <input id="searchInput" onChange={inputChangeHandler} value={search} type="search" placeholder="Eg Kenya, England" />
+          <div id="horizontaldivider" />
           <BsSearch />
         </form>
-        <label htmlFor="cars">
-          Choose by continent
-          <select onChange={selectChangeHandler} value={continent} name="cars" id="cars">
+        <label htmlFor="cars" id="selectFilter">
+          Continent
+          <select onChange={selectChangeHandler} value={continent} name="cars" id="countriesFilter">
             <option value="Africa"> Africa</option>
             <option value="Americas">Americas</option>
             <option value="Asia">Asia</option>
@@ -61,7 +63,7 @@ const Home = () => {
           </select>
         </label>
       </div>
-      <p>Countries</p>
+      <p id="heading">Stats by population</p>
       <div>
         {countriesData.loading && <h1>Loading...</h1>}
         {!countriesData.loading && countriesData.error ? (
@@ -71,7 +73,7 @@ const Home = () => {
           </div>
         ) : null}
         {!countriesData.loading && countriesData.countries.length ? (
-          <div>{displayCountries}</div>
+          <div id="countriesContainer">{displayCountries}</div>
         ) : null}
       </div>
     </>
