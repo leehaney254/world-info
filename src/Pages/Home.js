@@ -43,15 +43,15 @@ const Home = () => {
 
   return (
     <>
-      <Navbar data="Countries" />
+      <Navbar data="Countries" year="2023" />
       <div><img id="world" src={world} alt="world map" /></div>
-      <div>
-        <form>
+      <div id="filterContainer">
+        <form id="form">
           <input onChange={inputChangeHandler} value={search} type="search" placeholder="Eg Kenya, England" />
           <BsSearch />
         </form>
         <label htmlFor="cars">
-          Choose by continent
+          Continent
           <select onChange={selectChangeHandler} value={continent} name="cars" id="cars">
             <option value="Africa"> Africa</option>
             <option value="Americas">Americas</option>

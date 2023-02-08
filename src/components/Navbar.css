@@ -1,0 +1,14 @@
+#head {
+  display: flex;
+  justify-content: space-between;
+}
+
+#settings {
+  width: 4rem;
+  display: flex;
+  justify-content: space-around;
+}
+
+#back {
+  text-decoration: none;
+}
