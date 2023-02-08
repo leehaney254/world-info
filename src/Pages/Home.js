@@ -48,12 +48,13 @@ const Home = () => {
       <div><img id="world" src={world} alt="world map" /></div>
       <div id="filterContainer">
         <form id="form">
-          <input onChange={inputChangeHandler} value={search} type="search" placeholder="Eg Kenya, England" />
+          <input id="searchInput" onChange={inputChangeHandler} value={search} type="search" placeholder="Eg Kenya, England" />
+          <div id="horizontaldivider" />
           <BsSearch />
         </form>
-        <label htmlFor="cars">
+        <label htmlFor="cars" id="selectFilter">
           Continent
-          <select onChange={selectChangeHandler} value={continent} name="cars" id="cars">
+          <select onChange={selectChangeHandler} value={continent} name="cars" id="countriesFilter">
             <option value="Africa"> Africa</option>
             <option value="Americas">Americas</option>
             <option value="Asia">Asia</option>

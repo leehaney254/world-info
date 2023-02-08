@@ -29,7 +29,7 @@ const Details = () => {
           ) : null}
           {!countryData.loading && countryData.country.length ? (
             <div>
-              <div>
+              <div id="detailsFlag">
                 <img className="HomeFlag" src={countryData.country[0].flag.svg} alt="Country flag" />
               </div>
               <div>

@@ -9,3 +9,8 @@
   margin: 0 1rem;
   padding: 2rem 0;
 }
+
+#detailsFlag {
+  display: flex;
+  justify-content: center;
+}

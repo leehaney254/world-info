@@ -1,6 +1,8 @@
 #head {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
 }
 
 #settings {
@@ -11,4 +13,6 @@
 
 #back {
   text-decoration: none;
+  display: flex;
+  align-items: center;
 }
