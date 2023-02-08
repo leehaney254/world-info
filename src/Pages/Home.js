@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { BsSearch } from 'react-icons/bs';
 import { fetchCountries, filterContinent } from '../redux/countries/countries';
 import Navbar from '../components/Navbar';
-import world from '../assets/world.jpg';
+import world from '../assets/world.svg';
 import Country from '../components/Country';
 
 import './Home.css';

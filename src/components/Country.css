@@ -17,3 +17,13 @@
 .countryPopulation {
   display: flex;
 }
+
+.countryLink {
+  text-decoration: none;
+  color: white;
+}
+
+.borders {
+  border: solid 1px white;
+  padding: 1rem;
+}

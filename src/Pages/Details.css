@@ -6,11 +6,15 @@
 .detailContainer {
   display: flex;
   justify-content: space-between;
-  margin: 0 1rem;
-  padding: 2rem 0;
+  padding: 2rem 1rem;
+  border-bottom: 1px solid white;
 }
 
 #detailsFlag {
   display: flex;
   justify-content: center;
+}
+
+#detailscolor {
+  color: white;
 }
