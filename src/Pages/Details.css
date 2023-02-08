@@ -1,0 +1,11 @@
+.HomeFlag {
+  width: 40%;
+  height: 30%;
+}
+
+.detailContainer {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 1rem;
+  padding: 2rem 0;
+}

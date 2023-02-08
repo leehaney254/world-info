@@ -29,6 +29,7 @@ const Home = () => {
         key={country.countryName}
         name={country.countryName}
         population={country.population}
+        flag={country.flag.svg}
       />
     ));
 
@@ -43,7 +44,7 @@ const Home = () => {
 
   return (
     <>
-      <Navbar data="Countries" year="2023" />
+      <Navbar data="Countries" year={2023} />
       <div><img id="world" src={world} alt="world map" /></div>
       <div id="filterContainer">
         <form id="form">
@@ -61,7 +62,7 @@ const Home = () => {
           </select>
         </label>
       </div>
-      <p>Countries</p>
+      <p id="heading">Stats by population</p>
       <div>
         {countriesData.loading && <h1>Loading...</h1>}
         {!countriesData.loading && countriesData.error ? (
@@ -71,7 +72,7 @@ const Home = () => {
           </div>
         ) : null}
         {!countriesData.loading && countriesData.countries.length ? (
-          <div>{displayCountries}</div>
+          <div id="countriesContainer">{displayCountries}</div>
         ) : null}
       </div>
     </>

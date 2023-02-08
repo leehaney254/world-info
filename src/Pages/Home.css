@@ -12,3 +12,12 @@
   display: flex;
   align-items: center;
 }
+
+#heading {
+  text-align: center;
+}
+
+#countriesContainer {
+  display: grid;
+  grid-template-columns: auto auto;
+}
