@@ -49,7 +49,6 @@ const Home = () => {
       <div id="filterContainer">
         <form id="form">
           <input id="searchInput" onChange={inputChangeHandler} value={search} type="search" placeholder="Eg Kenya, England" />
-          <div id="horizontaldivider" />
           <BsSearch />
         </form>
         <label htmlFor="cars" id="selectFilter">

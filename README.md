@@ -9,6 +9,7 @@
     - [Tech Stack ](#tech-stack-)
     - [Key Features ](#key-features-)
   - [🚀 Live Demo ](#-live-demo-)
+  - [Loom Video ](#loom-video-)
   - [💻 Getting Started ](#-getting-started-)
     - [Prerequisites](#prerequisites)
     - [Setup](#setup)
@@ -61,6 +62,12 @@
 - [Live Demo Link](https://world-info.onrender.com/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## Loom Video <a name="loom-demo"></a>
+- My loom video can be found [here.](https://www.loom.com/share/fed86634e6c14708b236e76910519f4b)
+  
+
+  <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- GETTING STARTED -->
 
