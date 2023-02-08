@@ -7,12 +7,13 @@
   display: flex;
   justify-content: space-around;
   padding: 1rem 0;
+  background-color: white;
 }
 
 #form {
   display: flex;
   align-items: center;
-  border: 1px solid gray;
+  border: 1px solid #2c135f;
   border-radius: 1rem;
   padding: 0 0.5rem;
 }
@@ -20,6 +21,7 @@
 #heading {
   text-align: center;
   padding: 0.5rem 0;
+  color: white;
 }
 
 #countriesContainer {
@@ -38,11 +40,17 @@ input:focus {
 #horizontaldivider {
   width: 0.1px;
   height: 100%;
-  border: 1px solid gray;
+  border: 1px solid #2c135f;
   margin: 0 0.3rem;
-  background-color: gray;
+  background-color: #2c135f;
 }
 
 #countriesFilter {
   border-radius: 1rem;
+  border-color: #2c135f;
+  color: #2c135f;
+}
+
+h1 {
+  color: white;
 }

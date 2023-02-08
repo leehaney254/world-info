@@ -6,8 +6,8 @@ import { Link } from 'react-router-dom';
 import './Country.css';
 
 const Country = ({ name, population, flag }) => (
-  <div>
-    <Link to={name}>
+  <div className="borders">
+    <Link className="countryLink" to={name}>
       <div className="homeFlag">
         <img alt="Flag" src={flag} className="flagSize" />
         <BsArrowRightCircle />
