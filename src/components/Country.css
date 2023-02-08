@@ -24,8 +24,8 @@
 }
 
 .borders {
-  border: solid 1px white;
-  padding: 1rem;
+  border: solid 0.1px white;
+  padding: 0.5rem;
 }
 
 .colon {
