@@ -1,0 +1,20 @@
+#head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+  color: white;
+}
+
+#settings {
+  width: 4rem;
+  display: flex;
+  justify-content: space-around;
+}
+
+#back {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  color: white;
+}

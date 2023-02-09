@@ -1,0 +1,33 @@
+.flagSize {
+  width: 7rem;
+  height: 5rem;
+}
+
+.homeFlag {
+  display: flex;
+  justify-content: space-around;
+}
+
+.countryName {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.countryPopulation {
+  display: flex;
+}
+
+.countryLink {
+  text-decoration: none;
+  color: white;
+}
+
+.borders {
+  border: solid 0.1px white;
+  padding: 0.5rem;
+}
+
+.colon {
+  margin: 0 0.2rem;
+}
